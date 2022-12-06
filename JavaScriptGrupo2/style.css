@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+text-align: center;
+position: relative;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #302f2f;
+}
+
+.game {
+  border-bottom: 1px solid;
+  height: 300px;
+  width: 800px;
+  position: relative;
+  overflow: hidden;
+}
+
+.score {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  font-size: x-large;
+}
+
+.dino {
+  position: absolute;
+  bottom: 0;
+  background-image: url(img/prota.gif);
+  width: 280px;
+  height: 145px;
+  background-size: 200px;
+  background-repeat: no-repeat;
+}
+
+.cacto {
+  position: absolute;
+  bottom: 0;
+  background-image: url(img/serra.gif);
+  width: 100px;
+  height: 80px;
+  background-size: 130px;
+  background-repeat: no-repeat;
+  animation: cacto 3s linear infinite;
+  transform: rotateY(180deg);
+}
+
+@keyframes cacto {
+  0% {
+    right: -20px;
+  }
+  100% {
+    right: 850px;
+  }
+}
+
+.jump {
+  animation: jump 1.1s linear;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+
+  30% {
+    bottom: 80px;
+  }
+
+  50% {
+    bottom: 100px;
+  }
+
+  80% {
+    bottom: 80px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
